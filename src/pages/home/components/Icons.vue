@@ -28,15 +28,15 @@ export default {
                 desc: '一日游'
             },{
                 id: '0003',
-                imgurl: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
+                imgurl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/5ea666792b98f34c86faea912b5fbcf9.png',
                 desc: '玩转周边'
             },{
                 id: '0004',
-                imgurl: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
+                imgurl: 'http://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png',
                 desc: '华清宫'
             },{
                 id: '0005',
-                imgurl: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
+                imgurl: 'http://img1.qunarzz.com/piao/fusion/1803/e3/67df61427c8e1302.png',
                 desc: '长恨歌'
             },{
                 id: '0006',
@@ -80,33 +80,35 @@ export default {
     .icons >>> .swiper-container 
         height: 0
         padding-bottom: 50%
-    .icon  
-        position:relative
-        overflow: hidden 
-        float: left
-        width: 25%
-        heught: 0 
-        padding-bottom: 25%
-        .icon-img
-            position: absolute
-            top: 0
-            left: 0
-            right: 0
-            bottom: 22px
-            box-sizing: border-box
-            padding: 5px
-            .icon-img-content
-                display: block
-                margin: 0 auto
-                height: 100%
-        .icon-desc
-            position: absolute
-            left: 0
-            right: 0
-            bottom: 0
-            height: 22px
-            line-height: 22px
-            text-align: center
-            color: $darkTextColor
-            ellipsis()
+    .icons
+        margin-top:5px
+        .icon  
+            position:relative
+            overflow: hidden 
+            float: left
+            width: 25%
+            heught: 0 
+            padding-bottom: 25%
+            .icon-img
+                position: absolute
+                top: 0
+                left: 0
+                right: 0
+                bottom: 22px
+                box-sizing: border-box
+                padding: 5px
+                .icon-img-content
+                    display: block
+                    margin: 0 auto
+                    height: 100%
+            .icon-desc
+                position: absolute
+                left: 0
+                right: 0
+                bottom: 0
+                height: 22px
+                line-height: 22px
+                text-align: center
+                color: $darkTextColor
+                ellipsis()
 </style>

@@ -1,10 +1,10 @@
 <template>
     <div class="icons">
-        <swiper>
+        <swiper :options="swiperOptions">
              <swiper-slide v-for="(page,index) of pages" :key="index">
                 <div class="icon" v-for="item of page" :key="item.id">
                     <div class="icon-img">
-                        <img class="icon-img-content" :src="item.imgurl">
+                        <img class="icon-img-content" :src="item.imgUrl">
                     </div>
                     <p class="icon-desc">{{item.desc}}</p>
                 </div>
@@ -16,52 +16,20 @@
 <script>
 export default {
     name: 'HomeIcons',
+    props:{
+        list: Array
+    },
     data (){
-        return {
-            iconList: [{
-                id: '0001',
-                imgurl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-                desc: '经典门票'
-            },{
-                id: '0002',
-                imgurl: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-                desc: '一日游'
-            },{
-                id: '0003',
-                imgurl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/5ea666792b98f34c86faea912b5fbcf9.png',
-                desc: '玩转周边'
-            },{
-                id: '0004',
-                imgurl: 'http://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png',
-                desc: '华清宫'
-            },{
-                id: '0005',
-                imgurl: 'http://img1.qunarzz.com/piao/fusion/1803/e3/67df61427c8e1302.png',
-                desc: '长恨歌'
-            },{
-                id: '0006',
-                imgurl: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-                desc: '动植物园'
-            },{
-                id: '0007',
-                imgurl: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-                desc: '泡温泉'
-            },{
-                id: '0008',
-                imgurl: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-                desc: '兵马俑'
-            },{
-                id: '0009',
-                imgurl: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-                desc: '华山'
+        return{
+            swiperOptions:{
+                autoplay: false
             }
-            ]
         }
     },
     computed: {
         pages (){
             const pages = []
-            this.iconList.forEach((item, index) => {
+            this.list.forEach((item, index) => {
                 const page = Math.floor(index / 8)
                 if(!pages[page]){
                     pages[page] = []
@@ -81,7 +49,6 @@ export default {
         height: 0
         padding-bottom: 50%
     .icons
-        margin-top:5px
         .icon  
             position:relative
             overflow: hidden 
